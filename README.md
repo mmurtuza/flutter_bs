@@ -26,10 +26,10 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 
 This package exposes 4 new **Widgets**:
 
-* BootstrapContainer
-* BootstrapRow
-* BootstrapCol
-* BootstrapVisibility
+* BsContainer
+* BsRow
+* BsCol
+* BsVisibility
 
 ...and a series of **helper** methods:
 

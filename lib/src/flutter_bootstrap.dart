@@ -94,7 +94,7 @@ double bootstrapMaxWidthNonFluid(double width) {
 /// Implementation of the Bootstrap .container and .container-fluid
 ///
 class BsContainer extends StatelessWidget {
-  BootstrapContainer({
+  BsContainer({
     Key? key,
     required this.children,
     this.fluid = false,
@@ -178,9 +178,9 @@ class BsContainer extends StatelessWidget {
 ///
 /// Implementation of the Bootstrap .row
 ///
-/// A [BootstrapRow] may only contain [BootstrapCol] children.
+/// A [BsRow] may only contain [BsCol] children.
 ///
-class BootstrapRow extends StatelessWidget {
+class BsRow extends StatelessWidget {
   BsRow({
     required this.children,
     this.decoration,
@@ -198,9 +198,9 @@ class BootstrapRow extends StatelessWidget {
   final BoxDecoration? decoration;
 
   ///
-  /// List of the children of type [BootstrapCol]
+  /// List of the children of type [BsCol]
   ///
-  final List<BootstrapCol> children;
+  final List<BsCol> children;
 
   @override
   Widget build(BuildContext context) {
@@ -214,7 +214,7 @@ class BootstrapRow extends StatelessWidget {
         //
         // We need to iterate through all the children and consider any potential order
         //
-        List<BootstrapCol> _children = List.from(children);
+        List<BsCol> _children = List.from(children);
         _children.sort((a, b) => (a.orderPerSize[pfx] ?? 0) - (b.orderPerSize[pfx] ?? 0));
 
         return Container(
